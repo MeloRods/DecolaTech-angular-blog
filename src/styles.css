@@ -1,14 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+para os temas */
 *{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-  background-color: #111111;
-  color:white;
-  font-family: 'Open Sans', sans-serif;
+  --bg-color: #ffffff; /* Fundo claro */
+  --text-color: #000000; /* Texto escuro */
+  --menu-title-bg: #f8f9fa; /*  (claro) */
+  --menu-title-text: #000000; /*  (claro) */
+  --menu-bar-bg: #f8f9fa; /* (claro) */
+  --menu-bar-text: #000000; /* (claro) */
+  --big-card-bg: #ffffff; /*(claro) */
+  --big-card-text: #333333; /*  (claro) */
+  --small-card-bg: #ffffff; /*  (claro) */
+  --small-card-text: #333333; /* (claro) */
 }
 
-a{
+/* Estilo padrão (modo claro) */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Estilo do menu-title */
+.menu-title {
+  background-color: var(--menu-title-bg);
+  color: var(--menu-title-text);
+}
+
+/* Estilo do menu-bar */
+.menu-bar {
+  background-color: var(--menu-bar-bg);
+  color: var(--menu-bar-text);
+}
+
+/* Estilo do big-card */
+.big-card {
+  background-color: var(--big-card-bg);
+  color: var(--big-card-text);
+}
+
+/* Estilo do small-card */
+.small-card {
+  background-color: var(--small-card-bg);
+  color: var(--small-card-text);
+}
+
+/* Estilo do botão */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  --bg-color: #333333; /* Fundo escuro */
+  --text-color: #ffffff; /* Texto claro */
+  --menu-title-bg: #444444; /* (escuro) */
+  --menu-title-text: #ffffff; /* (escuro) */
+  --menu-bar-bg: #444444; /* (escuro) */
+  --menu-bar-text: #ffffff; /* (escuro) */
+  --big-card-bg: #555555; /* (escuro) */
+  --big-card-text: #ffffff; /* (escuro) */
+  --small-card-bg: #555555; /*  (escuro) */
+  --small-card-text: #ffffff; /* (escuro) */
+}
+
+a {
+  color: var(--link-color);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.menu-bar a,
+.big-card a,
+.small-card a {
+  color: inherit;
+}
+
+body.dark-mode .menu-bar a,
+body.dark-mode .big-card a,
+body.dark-mode .small-card a {
+  color: var(--link-color);
 }
